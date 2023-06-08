@@ -1,4 +1,4 @@
-import logo from './kalbo.png';
+import logo from './luffy.png';
 import './App.css';
 
 function App() {
