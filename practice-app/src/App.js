@@ -1,4 +1,4 @@
-import logo from './luffy.png';
+import logo from './bounce.png';
 import './App.css';
 
 function App() {

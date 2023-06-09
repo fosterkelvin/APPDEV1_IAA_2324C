@@ -50,7 +50,7 @@
 
 @keyframes App-logo-bounce {
   0%, 100% {
-    transform: translateY(100px);
+    transform: translateY(50px);
   }
   50% {
     transform: translateY(-150px);
