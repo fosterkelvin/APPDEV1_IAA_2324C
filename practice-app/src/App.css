@@ -17,7 +17,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-bounce 1s infinite;
+    animation: App-logo-bounce 2s infinite;
   }
 }
 
