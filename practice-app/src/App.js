@@ -1,22 +1,16 @@
-import logo from './bounce.png';
 import './App.css';
+import Navbar from './myComp/navbar.js';
+import AsideList from './myComp/asideList.js';
+import Main from './myComp/main.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Gear 4: Bounce Man</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar/>
+      <AsideList/>
+      <Main/>
     </div>
+
   );
 }
 
