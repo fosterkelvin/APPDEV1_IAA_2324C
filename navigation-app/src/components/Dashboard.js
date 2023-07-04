@@ -13,10 +13,12 @@ const Dashboard = () => {
   }
 
   return (
-    <div>
-      <h3 className="leading">This is your Dashboard</h3>
-      <button onClick={handleLogout}>Logout</button>
-    </div>
+    <>
+      <h3 className="leading" style={{ textAlign: "center" }}>This is your Dashboard</h3>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <button onClick={handleLogout}>Logout</button>
+      </div>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import bounce from '../bounce.png';
 
 
@@ -10,6 +10,10 @@ const Login = () => {
 
   const users = [{ username: 'Kel', password: 'qwerty' }];
 
+  const handleRedirect = () => {
+    navigate('/');
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const account = users.find((user) => user.username === username);
@@ -18,16 +22,16 @@ const Login = () => {
       localStorage.setItem('authenticated', true);
       navigate('/dashboard');
     }
-  };
-
-  if (localStorage.getItem('authenticated')) {
-    return <Navigate to="/dashboard" />;
   }
-
   return (
-    <div className="App">
-      <h2>Welcome to Login</h2>
-      <div className="container">
+    <div className="App ">
+      <div className="container border border-secondary p-3 mx-auto m-4" style={{ width: '600px' }}>
+        <div className="container-fluid position-relative">
+          <button class="btn btn-secondary" onClick={handleRedirect} style={{ position: 'absolute', top: 0, left: 0 }}>
+            Back
+          </button>
+        </div>
+        <h2>Welcome to One Piece</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="Username">Username</label>
@@ -48,12 +52,13 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <br />
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" className="btn btn-success"/>
           </div>
         </form>
       </div>
       <img src={bounce} className="App-logo luffy" alt="logo" />
     </div>
+
   );
 };
 
