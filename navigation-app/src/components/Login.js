@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Navigate } from 'react-router-dom';
 import bounce from '../bounce.png';
 
 
@@ -22,6 +22,9 @@ const Login = () => {
       localStorage.setItem('authenticated', true);
       navigate('/dashboard');
     }
+  }
+  if (localStorage.getItem('authenticated')) {
+    return <Navigate to="/dashboard" />;
   }
   return (
     <div className="App ">
