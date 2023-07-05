@@ -1,12 +1,8 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './App.css';
+import React from 'react'
+import Logout from './Logout'
 
-function App() {
-  const navigate = useNavigate();
-  const handleLogin = () => {
-    navigate('/login');
-  }
+function Navbar() {
+
   return (
     <>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -21,17 +17,12 @@ function App() {
             <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
         </ul>
-          <button onClick={handleLogin} class="btn btn-primary">Login</button>
+        <Logout/>
         </div>
     </div>
     </nav>
-    <section id='home'>
-    <div className='App'>
-      <h2>This is the Landing Page</h2>
-    </div>
-    </section>
     </>
-  );
+  )
 }
 
-export default App;
+export default Navbar

@@ -41,6 +41,7 @@ const Login = () => {
               name="Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              required
             />
             <br />
             <label htmlFor="Password">Password</label>
@@ -50,6 +51,7 @@ const Login = () => {
               name="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
             <br />
             <input type="submit" value="Submit" className="btn btn-success"/>
